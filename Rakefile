@@ -33,6 +33,11 @@ task "db:pop" do
   StudentsImporter.create_teachers
 end
 
+desc "populate the test database with assignment data"
+task "db:pop2" do
+  StudentsImporter.assign
+end
+
 desc 'Retrieves the current schema version number'
 task "db:version" do
   puts "Current version: #{ActiveRecord::Migrator.current_version}"

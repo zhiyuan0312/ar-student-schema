@@ -5,7 +5,7 @@ class Student < ActiveRecord::Base
 	validates :age, :numericality => {greater_than: 4}
 	validates :email, :uniqueness => true
 	validates :email, :format => {with: /.+@.+[.][^.]{2,}\z/}
-	validates :phone, :format => { :with => /.+\d{3}.+\d{3}.+\d{4}.+/ }
+	# validates :phone, :format => { :with => /.+\d{3}.+\d{3}.+\d{4}.+/ }
 
 
 	def name
